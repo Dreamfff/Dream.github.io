@@ -1,10 +1,61 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title>zfh</title>
-	</head>
-	<body>
-		<p>hello wrold</p>
-	</body>
-</html>
+ 2 <html lang="en">
+ 3 
+ 4 <head>
+ 5     <meta charset="UTF-8">
+ 6     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 7     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 8     <title>css画爱心</title>
+ 9     <style>
+10         body {
+11             background: url("images/1.jpg") no-repeat;
+12             background-size: cover;
+13 
+14         }
+15 
+16         .heart {
+17             width: 200px;
+18             height: 200px;
+19             background-color: red;
+20             position: relative;
+21             margin: 100px auto;
+22             animation: size 1s infinite;
+23             animation-direction: alternate;
+24         }
+25 
+26         .heart::before,
+27         .heart::after {
+28             content: "";
+29             width: 200px;
+30             height: 200px;
+31             background-color: red;
+32             position: absolute;
+33             border-radius: 50%;
+34         }
+35 
+36         .heart::before {
+37             left: -90px;
+38         }
+39 
+40         .heart::after {
+41             top: -90px;
+42         }
+43 
+44         @keyframes size {
+45             0% {
+46                 transform: scale(0.6) rotate(45deg);
+47             }
+48 
+49             100% {
+50                 transform: scale(1) rotate(45deg);
+51             }
+52         }
+53     </style>
+54 </head>
+55 
+56 <body>
+57     <div class="heart"></div>
+58 
+59 </body>
+60 
+61 </html>
